@@ -23,9 +23,11 @@ app.directive('pending', function($q) {
 				elem.hide();
 				spinnerIcon.show();
 				invokeRequest().then(function(){
-					elem.show();
+					setTimeout(function() {
+						elem.show();
 					spinnerIcon.hide();
-				}, 1000);
+				}, 4000);
+			  })	
 			})
 		}
 	}
